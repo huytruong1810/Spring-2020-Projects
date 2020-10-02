@@ -1,0 +1,79 @@
+# general format note: 
+# please avoid using the positive sign (+) to indicate a positive number
+# Ex: 2 should be written as 2 and not +2
+# please only use the negative sign (-) when writing a negative number,
+# please do not use this symbol for any other purposes
+# please enter the MDP information in the order as represented below
+
+# size of the gridworld
+size : 
+# should be exactly 2 positive integers in the format: 
+# number_of_row (newline) 
+# number_of_col (newline)
+5
+4
+
+reward : 
+# reward in non-terminal states
+# should be exactly one number in the format:
+# reward_value (newline)
+-0.04
+
+discount_rate : 
+# should be a positive number in between 0 and 1 and in the format:
+# discount_rate (newline)
+0.85
+
+epsilon : 
+# should be a positive number in the format:
+# epsilon (newline)
+0.001
+
+transition_probabilities : 
+# should be exactly four non-negative numbers in the format:
+# prob_moving_in_correct_direction (newline)
+# prob_slipping_right (newline) 
+# prob_slipping_left (newline)
+# prob_slipping_backward (newline)
+0.8
+0.1
+0.1
+0
+
+walls : 
+# list of location of walls (these numbers are positive integers)
+# each wall coordinate is in the format:
+# x_coordinate (newline) 
+# y_coordinate (newline)
+# end each wall location using a $ on a newline
+# end the sequence of walls by a % on a newline
+2
+2
+$
+2
+3
+$
+%
+
+terminal_states : 
+# list of terminal states (x, y, reward) 
+# (the coordinates x, y are positive integers)
+# each terminal's format: 
+# x_coordinate (newline) 
+# y_coordinate (newline) 
+# terminal_reward (newline)
+# end each terminal specifications using a $ on a newline
+# end the sequence of terminals by a % on a newline
+5
+3
+-3
+$
+5
+4
+2
+$
+4
+2
+1
+$
+%
